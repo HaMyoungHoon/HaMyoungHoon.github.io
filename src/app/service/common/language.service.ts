@@ -34,25 +34,25 @@ export class LanguageService {
 
     this.translateService.setDefaultLang(matchingLang);
     this.translateService.use(matchingLang);
-//    this.setLanguage(matchingLang);
+    this.setLanguage(matchingLang);
   }
 
   change(lang: LangType): void {
     const existLang = this.langList.find(x => getKeyName(lang) == x);
     if (existLang) {
       this.translateService.use(existLang);
-//      this.setLanguage(existLang);
+      this.setLanguage(existLang);
     }
   }
 
   setLanguage(lang: string): void {
-    this.commonService.setLanguage(lang).then().catch(response => {
-      if (response.status == 504) {
-        alert("서버 연결이 끊겼습니다.");
-      } else {
-        alert(response.statusText);
-      }
-    });
+//    this.commonService.setLanguage(lang).then().catch(response => {
+//      if (response.status == 504) {
+//        alert("서버 연결이 끊겼습니다.");
+//      } else {
+//        alert(response.statusText);
+//      }
+//    });
     setLocalStorage('lang', lang);
   }
 }

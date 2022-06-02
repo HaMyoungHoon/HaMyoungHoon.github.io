@@ -13,12 +13,35 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CommonService} from "./service/common/common.service";
+import { Error404Component } from './components/common/error/error404/error404.component';
+import { Menu1Component } from './components/menu1/menu1.component';
+import { Menu2Component } from './components/menu2/menu2.component';
+import { Menu3Component } from './components/menu3/menu3.component';
+import { Menu1Sub1Component } from './components/menu1/sub1/menu1-sub1.component';
+import { Menu2Sub1Component } from './components/menu2/sub1/menu2-sub1.component';
+import { Menu2Sub2Component } from './components/menu2/sub2/menu2-sub2.component';
+import { Menu3Sub1Component } from './components/menu3/menu3-sub1/menu3-sub1.component';
+import { Menu3Sub2Component } from './components/menu3/menu3-sub2/menu3-sub2.component';
+import { Menu3Sub3Component } from './components/menu3/menu3-sub3/menu3-sub3.component';
+import {PrimeModule} from "./service/common/prime.module";
+import {MessageService} from "primeng/api";
+import {DialogService} from "primeng/dynamicdialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     DashBoardComponent,
-    MenuConfigComponent
+    MenuConfigComponent,
+    Error404Component,
+    Menu1Component,
+    Menu2Component,
+    Menu3Component,
+    Menu1Sub1Component,
+    Menu2Sub1Component,
+    Menu2Sub2Component,
+    Menu3Sub1Component,
+    Menu3Sub2Component,
+    Menu3Sub3Component
   ],
   imports: [
     BrowserModule,
@@ -35,6 +58,7 @@ import {CommonService} from "./service/common/common.service";
     }),
     ReactiveFormsModule,
     FormsModule,
+    PrimeModule,
   ],
   providers: [
     {
@@ -43,6 +67,8 @@ import {CommonService} from "./service/common/common.service";
       multi: true,
     },
     CommonService,
+    MessageService,
+    DialogService,
   ],
   bootstrap: [AppComponent]
 })

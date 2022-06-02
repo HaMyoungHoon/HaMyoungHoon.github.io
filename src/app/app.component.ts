@@ -1,13 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {
-  NavigationStart,
-  Router,
-  Event,
-  RouterEvent,
-  NavigationEnd,
-  NavigationCancel,
-  NavigationError
-} from "@angular/router";
+import {NavigationStart, Router, Event, RouterEvent, NavigationEnd, NavigationCancel, NavigationError} from "@angular/router";
 import {LanguageService} from "./service/common/language.service";
 import {filter} from "rxjs";
 import {MenuConfigComponent} from "./components/common/menu-config/menu-config.component";
@@ -25,8 +17,8 @@ export class AppComponent {
     ).subscribe((e: RouterEvent) => {
       this.updateRouter(e);
     });
+    languageService.onInit();
     this.child = null;
-    this.languageService.onInit();
   }
 
   updateRouter(event: RouterEvent): void {

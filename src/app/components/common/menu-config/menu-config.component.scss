@@ -1,0 +1,58 @@
+$linkColor: #2196f3;
+.menu-config-container {
+  .top-menu {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px black;
+  }
+  .top-menu:hover{
+    background-color: #0d3c61aa;
+    color: #fef4f7;
+  }
+  .sub-menu {
+    padding-left: 20px;
+  }
+  .sub-menu:hover {
+    background-color: #0d1c61aa;
+    color: #fef4f7;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    .p-button {
+      margin-right: .5rem;
+    }
+
+    i {
+      margin-right: .5rem;
+      font-size: .75rem;
+      color: var(--text-color-secondary);
+
+      &.scale-active {
+        font-size: 1.25rem;
+        color: $linkColor;
+      }
+    }
+    a {
+      margin-right: .5rem;
+    }
+    .sun {
+      width: 3rem;
+      content: url("~src/assets/icon/sun.png");
+    }
+    .moon {
+      width: 3rem;
+      content: url("~src/assets/icon/moon.png");
+    }
+  }
+
+}
+
+:host ::ng-deep {
+  .p-toolbar {
+    background-color: transparent !important;
+  }
+}
