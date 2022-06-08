@@ -8,7 +8,7 @@ import {TestModel} from "../model/test-model";
   providedIn: 'root'
 })
 export class TestService {
-  private baseUrl = "http://old.gw.ssipec.com:51600/v1/gwAPI/get/ec_item_info_test/SICO"
+  private baseUrl = "https://old.gw.ssipec.com:51610/v1/gwAPI/get/ec_item_info_test/SICO"
 
   constructor(private http: HttpClient) { }
 
